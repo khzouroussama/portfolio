@@ -6,16 +6,23 @@ const styles = {
   container: ({ hasBackground }: { hasBackground: boolean }) => [
     tw`flex flex-col items-center justify-center h-screen`,
   ],
+  blob: tw`absolute duration-1000 origin-center scale-[2] rounded-full opacity-10 w-96 h-96 blur-xl animate-blob bg-gradient-to-br from-pink-500 to-yellow-500`,
 }
 
 const App = () => (
   <div css={styles.container({ hasBackground: true })}>
-    <div tw="flex flex-col justify-center min-h-full relative">
-      <div tw="relative w-full max-w-lg overflow-hidden">
-        <div tw="absolute top-0 -left-4 w-96 h-96 bg-purple-300 rounded-full opacity-50 mix-blend-multiply blur-3xl animate-blob"></div>
-        <div tw="absolute top-0 -right-4 w-96 h-96 bg-yellow-300 rounded-full opacity-50 mix-blend-multiply blur-3xl animate-blob delay-[2000s]"></div>
-        <div tw="absolute -bottom-8 left-28 w-96 h-96 bg-pink-300 rounded-full opacity-50 mix-blend-multiply blur-3xl animate-blob delay-[4000s]"></div>
-        <div tw="absolute -bottom-8 right-28 w-96 h-96 bg-green-300 rounded-full opacity-50 mix-blend-multiply blur-3xl animate-blob delay-[4000s]"></div>
+    <div tw="flex items-center justify-center min-h-screen relative w-screen overflow-hidden p-8">
+      <div css={styles.blob}></div>
+      <div>
+        <div tw="relative max-w-screen-xl mx-auto align-top shadow-lg bg-opacity-50 border border-gray-200 rounded-2xl p-8 bg-white">
+          <h1 tw="text-4xl font-extrabold text-center bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-blue-500">
+            Hello 👋 i not a frontend developer but i can help you with your
+            project 🤓
+          </h1>
+          <div>
+            <p tw="text-center text-gray-600">wdf</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>

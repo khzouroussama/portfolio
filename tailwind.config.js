@@ -7,16 +7,16 @@ module.exports = {
       keyframes: {
         blob: {
           '0%, 100%': {
-            transform: 'translate(0, 0) scale(1.5)',
+            transform: 'scale(3)',
           },
           '25%': {
-            transform: 'translate(20px, -50px) scale(2)',
+            transform: 'scale(4)',
           },
           '50%': {
-            transform: 'translate(0, 60px) scale(1)',
+            transform: 'scale(3)',
           },
           '75%': {
-            transform: 'translate(-20px, -15px) scale(2)',
+            transform: 'scale(4)',
           },
         },
       },
